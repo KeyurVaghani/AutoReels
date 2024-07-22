@@ -1,11 +1,12 @@
-from pytube import YouTube
+# tamporary fix for 400 Bad Request
+from pytubefix import YouTube
 
 def download_video(url, save_path='assest/'):
     try:
         yt = YouTube(url)
         video = yt.streams.filter(progressive=True, file_extension='mp4').first()
         if video:
-            video.download(save_path,filename='video.mp4')
+            video.download(save_path, filename='video.mp4')
             print("Download successful!")
         else:
             print("No progressive stream available for this video.")
