@@ -1,8 +1,6 @@
 import moviepy.editor as mpy
 from moviepy.video.fx.all import crop
 
-//testing
-
 def crop_video():
     clip = mpy.VideoFileClip("assest/video.mp4")
     (w, h) = clip.size
